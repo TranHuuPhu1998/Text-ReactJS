@@ -34,80 +34,80 @@ const data = {
   chart: [
     {
       name: 'Jan',
-      polygon: 22,
-      ethereum: 55,
-      bsc: 43,
-      others: 66,
+      polygon: 33,
+      ethereum: 11,
+      bsc: 4,
+      others: 8,
     },
     {
       name: 'FEB',
-      polygon: 11,
-      ethereum: 45,
+      polygon: 30,
+      ethereum: 6,
       bsc: 11,
-      others: 22,
+      others: 5,
     },
     {
       name: 'MAR',
-      polygon: 11,
-      ethereum: 22,
-      bsc: 43,
-      others: 66,
+      polygon: 35,
+      ethereum: 11,
+      bsc: 33,
+      others: 22,
     },
     {
       name: 'APR',
-      polygon: 66,
-      ethereum: 33,
+      polygon: 38,
+      ethereum: 6,
       bsc: 22,
-      others: 88,
+      others: 11,
     },
     {
       name: 'MAY',
-      polygon: 11,
+      polygon: 60,
       ethereum: 22,
       bsc: 34,
       others: 22,
     },
     {
       name: 'JUN',
-      polygon: 40,
-      ethereum: 50,
+      polygon: 38,
+      ethereum: 12,
       bsc: 30,
       others: 5,
     },
     {
       name: 'AUG',
-      polygon: 75,
-      ethereum: 44,
+      polygon: 45,
+      ethereum: 33,
       bsc: 20,
       others: 1,
     },
     {
       name: 'SEPT',
-      polygon: 11,
+      polygon: 50,
       ethereum: 30,
-      bsc: 40,
-      others: 22,
+      bsc: 20,
+      others: 11,
     },
     {
       name: 'OCT',
-      polygon: 40,
-      ethereum: 45,
+      polygon: 60,
+      ethereum: 20,
       bsc: 40,
       others: 22,
     },
     {
       name: 'NOV',
-      polygon: 60,
+      polygon: 50,
       ethereum: 10,
-      bsc: 0,
+      bsc: 5,
       others: 0,
     },
     {
       name: 'DEC',
-      polygon: 10,
-      ethereum: 45,
+      polygon: 75,
+      ethereum: 30,
       bsc: 0,
-      others: 22,
+      others: 11,
     },
   ],
 };
@@ -164,13 +164,13 @@ const DeFi: React.FC = () => {
         <TitlePage title={'DeFi Analytics | Productive Assets'} />
         <DarkMode />
       </Row>
-      <div className="de-fi__list-card w-100">
+      <Row className="de-fi__list-card w-100">
         <CardTotal price={data.total_productive.total_productive_assets} text="Total Productive Assets" />
         <CardTotal price={data.total_productive.total_liabilities} text="Total Liabilities" />
         <CardTotal price={data.total_productive.interests_and_rewards} text="Interests & Rewards" />
         <CardTotal price={data.total_productive.total_profit_and_loss} text="Total Profit & Loss" />
         <CardTotal price={data.total_productive.daily_interest} text="Daily Interest" />
-      </div>
+      </Row>
       <Row className="wrapper-char">
         <Row className="container-char" justify="center">
           <Row className="de-fi__list-box" justify="center">
@@ -226,10 +226,10 @@ const DeFi: React.FC = () => {
               <XAxis dataKey="name" />
               <YAxis domain={[0, 100]} />
               <Tooltip />
-              <Area type="monotone" dataKey="polygon" stroke="#8F76FA" fillOpacity={0.3} activeDot={{ r: 6 }} fill="url(#polygon)" />
-              <Area type="monotone" dataKey="ethereum" stroke="red" fillOpacity={0.3} activeDot={{ r: 6 }} fill="url(#bsc)" />
-              <Area type="monotone" dataKey="bsc" stroke="#EC5956" fillOpacity={0.3} activeDot={{ r: 6 }} fill="url(#colorUv)" />
-              <Area type="monotone" dataKey="others" stroke="#6B6B6B" fillOpacity={0.3} activeDot={{ r: 6 }} fill="url(#others)" />
+              <Area type="monotone" dataKey="polygon" stroke="#8F76FA" fillOpacity={0.3} activeDot={{ r: 6 }} fill="url(#polygon)" strokeWidth={4} />
+              <Area type="monotone" dataKey="ethereum" stroke="#FFC04E" fillOpacity={0.3} activeDot={{ r: 6 }} fill="url(#bsc)" strokeWidth={1} />
+              <Area type="monotone" dataKey="bsc" stroke="#EC5956" fillOpacity={0.3} activeDot={{ r: 6 }} fill="url(#colorUv)" strokeWidth={0.5} />
+              <Area type="monotone" dataKey="others" stroke="#6B6B6B" fillOpacity={0.3} activeDot={{ r: 6 }} fill="url(#others)" strokeWidth={0.7} />
             </AreaChart>
           </ResponsiveContainer>
         </Row>
@@ -255,7 +255,7 @@ const DeFi: React.FC = () => {
           </Row>
         </Row>
       </Row>
-      <div className="productive-assets w-100">
+      <Row className="productive-assets w-100 d-block">
         <Title level={2} className="de-fi__title">
           Productive Assets
         </Title>
@@ -271,7 +271,7 @@ const DeFi: React.FC = () => {
           setIsModalVisible={() => setIsModalVisible(!isModalVisible)}
         />
         <ListProductive title={'Polygon'} price={data.total_floor.polygon} setIsModalVisible={() => setIsModalVisible(!isModalVisible)} />
-      </div>
+      </Row>
       <ModalSingleAssets isModalVisible={isModalVisible} setIsModalVisible={() => setIsModalVisible(!isModalVisible)} />
     </Row>
   );

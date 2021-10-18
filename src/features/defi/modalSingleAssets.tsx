@@ -1,10 +1,11 @@
 import React from 'react';
+import { Modal, Row, Typography, Button, Col, Divider, Image } from 'antd';
 import IconDropDownSmall from 'library/assets/images/icon-drop-down-small.png';
 import IconExclamation from 'library/assets/icons/icon-exclamation';
-import { Modal, Row, Typography, Button, Col, Divider, Image } from 'antd';
 import hood_one from 'library/assets/images/hood-1.png';
 import hood_two from 'library/assets/images/hood-2.png';
 import hood_third from 'library/assets/images/hood-3.png';
+import BarChartModal from 'library/components/feature-defi/bar-chart-modal/BarChartModal';
 import './modal.modules.scss';
 
 const { Text, Title, Paragraph } = Typography;
@@ -15,12 +16,6 @@ interface Props {
 }
 
 const modalSingleAssets = ({ isModalVisible, setIsModalVisible }: Props) => {
-  // const [isModalVisible, setIsModalVisible] = useState(true);
-
-  // const showModal = () => {
-  //   setIsModalVisible(true);
-  // };
-
   const handleCancel = () => {
     setIsModalVisible(false);
   };
@@ -62,7 +57,7 @@ const modalSingleAssets = ({ isModalVisible, setIsModalVisible }: Props) => {
         <Text className="color-13BA9A">+$50,800</Text>
         <Text>
           <Button className="btn-drop-down">
-            <img src={IconDropDownSmall} alt="" />
+            <Image src={IconDropDownSmall} preview={false} alt="" />
           </Button>
         </Text>
       </Row>
@@ -141,6 +136,42 @@ const modalSingleAssets = ({ isModalVisible, setIsModalVisible }: Props) => {
             </Row>
           </Col>
         </Row>
+        <Row className="process-text">
+          <Col className="flex-center card__delta background-white pb-12">
+            <Text>Δ Delta</Text>
+          </Col>
+          <Row className="process-percent">
+            <Col className="flex-center card__interest background-white pb-12" style={{ width: '40%' }}>
+              <Text>Interest Earned</Text>
+            </Col>
+            <Col className="flex-center card__rewards background-white pb-12" style={{ width: '60%' }}>
+              <Text>Rewards Earned</Text>
+            </Col>
+          </Row>
+        </Row>
+        <Row className="process-price">
+          <Col className="flex-center card__delta">
+            <Text>-$50,000</Text>
+          </Col>
+          <Row className="process-percent">
+            <Col className="flex-center card__interest" style={{ width: '40%' }}>
+              <Text>+$94,600</Text>
+            </Col>
+            <Col className="flex-center card__rewards" style={{ width: '60%' }}>
+              <Text>+$6,200</Text>
+            </Col>
+          </Row>
+        </Row>
+        <Col className="card__total">
+          <Text className="number">= $50,8000</Text>
+          <Text className="text">Detailed View</Text>
+        </Col>
+      </Row>
+      <Row className="wrapper-chart">
+        <Title level={3} className="modal__title">
+          Current P&L and Yield
+        </Title>
+        <BarChartModal />
       </Row>
     </Modal>
   );
