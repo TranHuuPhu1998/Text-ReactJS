@@ -1,0 +1,27 @@
+.nav {
+  border-right: 1px solid #EAEAEA;
+  height: 100%;
+  width: 188px;
+  background-color: white;
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    margin-bottom: 45px;
+    .icon {
+      width: 40px;
+    }
+    .title {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      display: flex;
+      align-items: center;
+      color: #2C2C2C;
+    }
+  }
+}

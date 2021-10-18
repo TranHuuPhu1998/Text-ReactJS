@@ -1,0 +1,37 @@
+.break-down {
+  &__title {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+    color: #2c2c2c;
+    margin-bottom: 0px;
+    span {
+      color: #13ba9a;
+    }
+  }
+}
+.wrapper-list {
+  border: 1px solid #e0e0e0;
+  border-radius: 14px;
+  padding: 30px 22px;
+  margin-top: 30px;
+}
+.show-list {
+  height: 0px;
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
+}
+.active {
+  height: 100%;
+  visibility: visible;
+}
+.btn-drop-down {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: all 0.4s ease-in-out;
+}
+.active-icon {
+  transform: rotate(90deg);
+}

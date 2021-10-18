@@ -1,0 +1,15 @@
+.wrapper {
+    &-layout {
+        min-height: 100vh;
+        display: flex;
+        overflow: hidden;
+        &__body-content{
+            display: flex;
+        }
+    }
+}
+.body-content {
+    &__nav-left{
+        display: flex;
+    }
+}

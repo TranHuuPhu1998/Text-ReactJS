@@ -1,0 +1,110 @@
+.wrapper {
+    font-family: Rubik;
+    &-de-fi {
+        padding: 45px;
+        max-width: min-content;
+    }
+}
+.de-fi {
+    &__wrapper-title{
+        max-width: 1150px;
+    }
+    &__list-card {
+        display: flex;
+        margin-top: 30px;
+    }
+    &__list-box {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    &__box{
+        padding: 7px 10px;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 14px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #6B6B6B;
+        border: 1px solid #E0E0E0;
+        border-radius: 10px;
+        display: inline-block;
+        cursor: pointer;
+        .active {
+            color: #13BA9A;
+            font-weight: 500;
+            text-decoration: underline;
+        }
+        &:not(:last-child) {
+            margin-right: 22px;
+        }
+        span {
+            &:not(:last-child) {
+                padding-right: 10px;
+            }
+        }
+    }
+}
+.wrapper-char {
+    display: flex;
+    .container-char {
+        width: 1026px;
+        height: 500px;
+        margin-top: 22px;
+        border: 1px solid #E0E0E0;
+        border-radius: 10px;
+        padding: 22px 0px 15px 10px;
+        background-color: white;
+    }
+}
+.wrapper-next-word {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    .next-word {
+        &__title{
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+            text-align: center;
+            color: #2C2C2C;
+            margin-bottom: 11px;
+        }
+        &__list{
+            border: 1px solid #E0E0E0;
+            border-radius: 15px;
+            height: 460px;
+            width: 90px;
+            overflow: hidden;
+            margin-bottom: 0px;
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                font-weight: 500;
+                font-size: 14.04px;
+                line-height: 17px;
+            }
+            .other {
+                color: #6B6B6B;
+                background-color: rgba(#E0E0E0, $alpha: 0.1);
+            }
+            .polygon {
+                color: #8F76FA;
+                background-color: #E9E4FE;
+            }
+            .ethereum {
+                background-color: #FFF2DC;
+                color: #FFC04E;
+            }
+            .bsc {
+                background-color: #FBDEDD;
+                color: #EC5956;
+            }
+        }
+    }
+}
+.productive-assets {
+    margin-top: 22px;
+}

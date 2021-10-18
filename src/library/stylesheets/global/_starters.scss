@@ -1,0 +1,52 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 12px;
+  line-height: 18px;
+  font-family: 'Rubik', sans-serif !important;
+  background-color: #ffffff;
+  color: #2E3842;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@include screen-sm {
+  body {
+    font-size: 16px;
+    line-height: 14px;
+  }
+}
+
+a {
+  color: #5C6670;
+  text-decoration: none;
+
+  &:hover {
+    color: #5C6670;
+    text-decoration: underline;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.canvasjs-chart-credit {
+  display: none;
+}
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+p {
+  margin-bottom: 0px;
+}

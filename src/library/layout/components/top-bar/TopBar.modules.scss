@@ -1,0 +1,17 @@
+.top-bar {
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 31px;
+    padding-bottom: 31px;
+    border-bottom: 1px solid  #E0E0E0;
+    background-color: white;
+  }
+  &__item {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #2C2C2C;
+    padding-right: 63px;
+  }
+}
