@@ -24,6 +24,10 @@
   margin-right: 24px !important;
 }
 
+.mr-12 {
+  margin-right: 12px !important;
+}
+
 .ml-24 {
   margin-left: 24px !important;
 }
@@ -58,6 +62,10 @@
   padding-bottom: 12px;
 }
 
+.pl-6 {
+  padding-left: 6px;
+}
+
 // flex
 
 .d-block {
@@ -73,7 +81,7 @@
 }
 
 .flex-center {
-  display: flex;
+  display: flex !important;
   justify-content: center;
   align-items: center;
 }

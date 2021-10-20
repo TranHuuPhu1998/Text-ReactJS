@@ -11,5 +11,6 @@
 .body-content {
     &__nav-left{
         display: flex;
+        flex-flow: nowrap;
     }
 }

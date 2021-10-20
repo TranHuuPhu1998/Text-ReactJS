@@ -39,10 +39,11 @@ module.exports = {
     'no-use-before-define': 0,
 
     // Typescript
-    '@typescript-eslint/no-explicit-any': 2,
+
     '@typescript-eslint/no-unused-vars': 1,
     '@typescript-eslint/explicit-module-boundary-types': 0,
     '@typescript-eslint/no-empty-interface': 2,
+    "@typescript-eslint/no-explicit-any": "off"
   },
   settings: {
     react: {

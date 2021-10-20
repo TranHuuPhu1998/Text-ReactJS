@@ -1,11 +1,17 @@
 import './TitlePage.modules.scss';
+import { Typography } from 'antd';
 
+const { Title } = Typography;
 interface Props {
   title: string;
 }
 
 const TitlePage = ({ title }: Props) => {
-  return <h2 className="title">{title}</h2>;
+  return (
+    <Title level={2} className="title">
+      {title}
+    </Title>
+  );
 };
 
 export default TitlePage;

@@ -10,7 +10,7 @@
   color: #6B6B6B;
   font-size: 12px;
   width: max-content;
-  margin: 23px auto;
+  margin: 40px auto;
   .ant-typography {
     display: flex;
     padding-right: 10px;
@@ -30,5 +30,8 @@
     &-rewards {
       background-color: #8F76FA;
     }
+  }
+  .total-images {
+    line-height: 1;
   }
 }

@@ -3,16 +3,16 @@ import IconExclamation from 'library/assets/icons/icon-exclamation';
 import ShowListTr from '../show-list-tr/ShowListTr';
 import './BreakDown.modules.scss';
 
-/* eslint-disable  @typescript-eslint/no-explicit-any */
 interface Props {
   title: string;
   price: string;
   icon: string;
   detailsProductive: any;
+  setDataViewDetails: any;
   setIsModalVisible: (val: boolean) => void;
 }
 
-const BreakDown = ({ icon, detailsProductive, setIsModalVisible }: Props) => {
+const BreakDown = ({ icon, detailsProductive, setIsModalVisible, setDataViewDetails }: Props) => {
   const listText = ['Asset', 'Deposited Qty', 'Interest', 'Rewards', 'APR', 'APY', 'Cost Basis', 'Total Current Value', 'Total P & L'];
 
   return (
@@ -37,8 +37,8 @@ const BreakDown = ({ icon, detailsProductive, setIsModalVisible }: Props) => {
               </tr>
             </thead>
             <tbody className="tbody">
-              {detailsProductive.map((item: any, index: number) => (
-                <ShowListTr key={index} item={item} setIsModalVisible={setIsModalVisible} />
+              {detailsProductive?.map((item: any, index: number) => (
+                <ShowListTr key={index} item={item} setIsModalVisible={setIsModalVisible} setDataViewDetails={setDataViewDetails} />
               ))}
             </tbody>
           </table>

@@ -1,6 +1,7 @@
 .modal {
   width: 1122px;
   font-family: Rubik;
+  color: #6B6B6B;
   .wrapper-current-yield {
     margin-top: 22px;
     border-radius: 15px;
@@ -10,7 +11,6 @@
   }
   .ant-typography {
     font-size: 14px;
-    color: #2c2c2c;
   }
   h3.modal__title {
     font-weight: 500;
@@ -85,22 +85,29 @@
       font-weight: 500;
       font-size: 14px;
       line-height: 17px;
+      .ant-typography {
+        color: #ec5956;
+      }
     }
     &__interest {
       font-weight: 500;
       font-size: 14px;
       line-height: 17px;
-      color: #ffc04e;
-      background-color: #FFF2DC;
+      background-color: #fff2dc;
+      .ant-typography {
+        color: #ffc04e;
+      }
     }
     &__rewards {
       font-weight: 500;
       font-size: 14px;
       line-height: 17px;
-      color: #8f76fa;
       background-color: #e9e4fe;
+      .ant-typography {
+        color: #8f76fa;
+      }
     }
-    &__total{
+    &__total {
       top: 17px;
       left: 25px;
       .number {
@@ -109,14 +116,14 @@
         line-height: 24px;
         display: flex;
         align-items: center;
-        color: #13BA9A;
+        color: #13ba9a;
       }
       .text {
         font-weight: 500;
         font-size: 11.4271px;
         line-height: 14px;
         text-decoration-line: underline;
-        color: #13BA9A;
+        color: #13ba9a;
         float: right;
         cursor: pointer;
       }
@@ -142,9 +149,44 @@
     height: 550px;
     margin-top: 22px;
     padding-top: 22px;
-    border: 1px solid #EAEAEA;
+    border: 1px solid #eaeaea;
     box-sizing: border-box;
     border-radius: 15px;
+  }
+  .de-fi {
+    &__list-box {
+      text-align: center;
+      margin: 0 auto 20px auto;
+      width: 94%;
+      padding-left: 50px;
+    }
+    &__box {
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 14px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #6b6b6b;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      display: inline-block;
+      cursor: pointer;
+      .active-text {
+        color: #13ba9a;
+        font-weight: 500;
+        text-decoration: underline;
+      }
+      &:not(:last-child) {
+        margin-right: 22px;
+      }
+      span {
+        &:not(:last-child) {
+          padding-right: 10px;
+        }
+      }
+    }
   }
 }
 .ant-image-mask:hover {

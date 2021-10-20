@@ -1,10 +1,11 @@
+import { Row } from 'antd';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './TopBar.modules.scss';
 
 const TopBar: React.FC = () => {
   return (
-    <ul className="top-bar__list">
+    <Row className="top-bar__list">
       <NavLink to="/home" className="top-bar__item">
         Home
       </NavLink>
@@ -20,7 +21,7 @@ const TopBar: React.FC = () => {
       <NavLink to="/staking" className="top-bar__item">
         Staking
       </NavLink>
-    </ul>
+    </Row>
   );
 };
 

@@ -1,7 +1,10 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
+import defiSlide from 'app/redux/defiSlice';
 
 export const store = configureStore({
-  reducer: {}
+  reducer: {
+    defiSlide
+  }
 });
 
 export type AppDispatch = typeof store.dispatch;

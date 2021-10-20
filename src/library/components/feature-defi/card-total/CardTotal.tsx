@@ -13,7 +13,7 @@ const CardTotal: React.FC<Props> = ({ price, text, prefix }) => {
     <div className="card">
       <p>
         {prefix}
-        {price.replaceAll('.', ',')}
+        {price}
       </p>
       <small>
         {text}
