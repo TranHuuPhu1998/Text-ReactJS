@@ -742,5 +742,31 @@
         }
       ]
     }
+  },
+  "manage-wallets": {
+    "connected" : [
+      {
+        "id":1,
+        "id_connect": "0x4e5e684384ds7sd0a7E",
+        "type_name":"Ethereum"
+      }
+    ],
+    "watching" : [
+      {
+        "id":1,
+        "id_watching": "0x4e5e684384ds7sd0a7E",
+        "type_name":"Matic"
+      },
+      {
+        "id":2,
+        "id_watching": "4x544e5e684384ds7sd0a7R",
+        "type_name":"Matic2"
+      },
+      {
+        "id":3,
+        "id_watching": "4x5644e5e684384ds7sd0a7G",
+        "type_name":"Matic4"
+      }
+    ]
   }
 }

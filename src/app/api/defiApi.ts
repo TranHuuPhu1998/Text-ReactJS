@@ -13,9 +13,14 @@ const getListProductiveEthereum = ()=> {
   return getData(`defi-productive-ethereum`);
 };
 
+const getListManageWallets = ()=> {
+  return getData(`manage-wallets`);
+};
+
 const defiSlice = {
   getListDeFi,
-  getListProductiveEthereum
+  getListProductiveEthereum,
+  getListManageWallets
 };
 
 export default defiSlice;

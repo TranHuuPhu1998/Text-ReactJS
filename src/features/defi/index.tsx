@@ -12,6 +12,7 @@ import ListProductive from 'library/components/feature-defi/list-productive/List
 import DarkMode from 'library/components/feature-defi/dark-mode/DarkMode';
 import TitlePage from 'library/components/title-page/TitlePage';
 import ModalSingleAssets from './modalSingleAssets';
+import ModalManageWallets from './modalManageWallets';
 import './styles.modules.scss';
 
 const { Text, Title } = Typography;
@@ -25,7 +26,7 @@ const DeFi: React.FC = () => {
   const [percentBsc, setPercentBsc] = useState('');
   const [dataViewDetails, setDataViewDetails] = useState({});
 
-  const { entities, productive_ethereum, isLoading } = useAppSelector((state) => state.defiSlide);
+  const { entities, productive_ethereum, isLoading, connect } = useAppSelector((state) => state.defiSlide);
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -179,6 +180,7 @@ const DeFi: React.FC = () => {
             />
           </Row>
           <ModalSingleAssets dataViewDetails={dataViewDetails} isModalVisible={isModalVisible} setIsModalVisible={() => setIsModalVisible(!isModalVisible)} />
+          <ModalManageWallets isModalWalletsVisible={connect} />
         </Row>
       )}
       {isLoading && (
